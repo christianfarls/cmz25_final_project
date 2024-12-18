@@ -1,4 +1,10 @@
-frking Lot Simulation in Verilog
+#Parking Lot Gate Simulator
+
+Christian Farls: cfarls@nd.edu
+Matt Zagrocki: mzagrock@nd.edu
+Danny Mikolay: dmikolay@nd.edu
+
+CSE 30342 - Digital Integrated Circuits - University of Notre Dame
 
 ## Overview
 
