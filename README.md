@@ -30,6 +30,7 @@ This Verilog module simulates a parking lot with functionalities for entering an
 | `passcode_in` | 8 bits  | Input passcode for validating entry requests.           |
 | `enter_req`   | 1 bit   | Signal requesting the entry gate to open.               |
 | `exit_req`    | 1 bit   | Signal requesting the exit gate to open.                |
+| `max_capacity`| 4 bits  | Maximum parking lot capacity input.                     |
 
 ### Outputs
 
@@ -38,13 +39,13 @@ This Verilog module simulates a parking lot with functionalities for entering an
 | `car_count`      | 5 bits  | The current number of cars in the parking lot.                  |
 | `entry_gate_open`| 1 bit   | Indicates if the entry gate is open (1) or closed (0).          |
 | `exit_gate_open` | 1 bit   | Indicates if the exit gate is open (1) or closed (0).           |
+| `lot_full`       | 1 bit   | Indicates if the lot has reached capacity or not.               |
 
 ### Parameters
 
 | Parameter      | Value      | Description                                      |
 |----------------|------------|--------------------------------------------------|
 | `PASSCODE`     | `8'b11111111` | Predefined passcode for validating entry.      |
-| `MAX_COUNT`    | `5'd20`      | Maximum number of cars allowed in the parking lot. |
 
 ### States
 
