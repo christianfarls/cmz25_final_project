@@ -10,7 +10,7 @@ Danny Mikolay: dmikolay@nd.edu
 
 ## Overview
 
-This Verilog module simulates a parking lot with basic functionalities for entering and exiting the lot. The system uses a finite state machine (FSM) to control the entry and exit gates, validate passcodes, and maintain the car count in the lot. The parking lot has a fixed maximum capacity, and only valid passcodes can allow cars to enter. The system also ensures that a car can exit the lot if there is at least one car present.
+This Verilog module simulates a parking lot with functionalities for entering and exiting the lot. The system uses a finite state machine (FSM) to control the entry and exit gates, validate passcodes, and maintain the car count in the lot. The parking lot has a fixed maximum capacity, and only valid passcodes can allow cars to enter. The system also ensures that a car can exit the lot if there is at least one car present.
 
 ### Key Features
 
@@ -114,5 +114,4 @@ The parking lot system operates as follows:
 
 ## Conclusion
 
-This Verilog module simulates a simple yet effective parking lot control system. It manages car entry and exit, validates passcodes, and ensures that the parking lot capacity is never exceeded. The system uses an FSM for state management and provides clear and predictable behavior based on the input signals.
-
+This module simulates an effective parking lot control system. It manages car entry and exit, validates passcodes, and ensures that the parking lot capacity is never exceeded.
