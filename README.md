@@ -1,12 +1,12 @@
 # Parking Lot Gate Simulator
 
+CSE 30342 - Digital Integrated Circuits - University of Notre Dame
+
 Christian Farls: cfarls@nd.edu
 
 Matt Zagrocki: mzagrock@nd.edu
 
 Danny Mikolay: dmikolay@nd.edu
-
-CSE 30342 - Digital Integrated Circuits - University of Notre Dame
 
 ## Overview
 
