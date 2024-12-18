@@ -114,9 +114,5 @@ The parking lot system operates as follows:
 
 ## Conclusion
 
-This Verilog module simulates a simple yet effective parking lot control system. It manages car entry and exit, validates passcodes, and ensures that the parking lot capacity is never exceeded. The system uses an FSM for state management and provides clear and predictable behavior based on the input signals.U_Analog_Parts ~/esc-courses/fa24-cse-30342.01/public/UofU_Analog_Parts
-DEFINE UofU_Example ~/esc-courses/fa24-cse-30342.01/public/UofU_Example
-DEFINE UofU_Digital_Parts_v1_2 ~/esc-courses/fa24-cse-30342.01/public/UofU_Digital_Parts_v1_2
-DEFINE UofU_TechLib_ami06 ~/esc-courses/fa24-cse-30342.01/public/UofU_TechLib_ami06
-DEFINE UofU_Pads ~/esc-courses/fa24-cse-30342.01/public/UofU_Pads
+This Verilog module simulates a simple yet effective parking lot control system. It manages car entry and exit, validates passcodes, and ensures that the parking lot capacity is never exceeded. The system uses an FSM for state management and provides clear and predictable behavior based on the input signals.
 
