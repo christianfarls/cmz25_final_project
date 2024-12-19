@@ -10,13 +10,13 @@ Danny Mikolay: dmikolay@nd.edu
 
 ## Overview
 
-This Verilog module simulates a parking lot with functionalities for entering and exiting the lot. The system uses a finite state machine (FSM) to control the entry and exit gates, validate passcodes, and maintain the car count in the lot. The parking lot has a fixed maximum capacity, and only valid passcodes can allow cars to enter. The system also ensures that a car can exit the lot if there is at least one car present.
+This Verilog module simulates a parking lot with functionalities for entering and exiting the lot. The system uses a finite state machine (FSM) to control the entry and exit gates, validate passcodes, and maintain the car count in the lot. The parking lot has a user-set maximum capacity, and only valid passcodes can allow cars to enter. The system also ensures that a car can exit the lot if there is at least one car present.
 
 ### Key Features
 
 - **Passcode-based entry**: A valid passcode is required to open the entry gate and allow a car to enter the lot.
 - **Automatic exit**: No passcode is required to exit, but the gate will only open if there are cars in the lot.
-- **Car count management**: The car count is maintained, and the system ensures that the number of cars doesn't exceed the lot's capacity.
+- **Car count management**: The car count is maintained, and the system ensures that the number of cars doesn't exceed the lot's set capacity.
 - **Gate operation**: The entry and exit gates operate for a single cycle when requested.
 
 ## Module Description
@@ -30,7 +30,7 @@ This Verilog module simulates a parking lot with functionalities for entering an
 | `passcode_in` | 8 bits  | Input passcode for validating entry requests.           |
 | `enter_req`   | 1 bit   | Signal requesting the entry gate to open.               |
 | `exit_req`    | 1 bit   | Signal requesting the exit gate to open.                |
-| `max_capacity`| 4 bits  | Maximum parking lot capacity input.                     |
+| `max_capacity`| 5 bits  | Maximum parking lot capacity input.                     |
 
 ### Outputs
 
