@@ -1,3 +1,20 @@
+/********
+CSE 30342 - Digital Integrated Circuits - University of Notre Dame
+
+Christian Farls: cfarls@nd.edu
+
+Matt Zagrocki: mzagrock@nd.edu
+
+Danny Mikolay: dmikolay@nd.edu
+
+This Verilog module simulates a parking lot with functionalities
+for entering and exiting the lot. The system uses a finite state machine (FSM)
+to control the entry and exit gates, validate passcodes, and maintain 
+the car count in the lot. The parking lot has a user-set maximum capacity, 
+and only valid passcodes can allow cars to enter. The system also ensures 
+that a car can exit the lot if there is at least one car present.
+*******/
+
 module user_proj_parking (
     input wire clk,
     input wire reset,
@@ -63,6 +80,7 @@ module user_proj_parking (
 
             ENTRY_CLOSE: begin
                 // close gate, return to idle
+                //can add delay or sensor input for real-world usage
                 next_state = IDLE;
             end
 
@@ -81,6 +99,7 @@ module user_proj_parking (
 
             EXIT_CLOSE: begin
                 // close gate, return to idle and wait for entry or exit request
+                //can add delay or sensor input for real-world usage
                 next_state = IDLE;
             end
 
@@ -89,6 +108,7 @@ module user_proj_parking (
     end
 
     // output, datapath logic
+
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             car_count       <= 0;
