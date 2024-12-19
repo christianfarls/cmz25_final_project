@@ -69,8 +69,8 @@ The FSM is designed with 7 states:
 | `IDLE`          | `exit_req`                          | `CHECK_EXIT`        | Transition to check exit request.            |
 | `CHECK_ENTRY`   | `passcode_in == PASSCODE` and `car_count < MAX_COUNT` | `ENTRY_OPEN`       | Open entry gate and increment car count.     |
 | `CHECK_ENTRY`   | Else (incorrect passcode)                                | `IDLE`              | Invalid passcode or full lot, return to idle.|
-| `ENTRY_OPEN`    | Always                              | `ENTRY_CLOSE`       | Open entry gate for one cycle.               |
-| `ENTRY_CLOSE`   | Always                              | `IDLE`              | Close entry gate and return to idle.         |
+| `ENTRY_OPEN`    | Always (option to add delay)                             | `ENTRY_CLOSE`       | Open entry gate for one cycle.               |
+| `ENTRY_CLOSE`   | Always (option to add delay)                              | `IDLE`              | Close entry gate and return to idle.         |
 | `CHECK_EXIT`    | `car_count > 0`                     | `EXIT_OPEN`         | Open exit gate and decrement car count.     |
 | `CHECK_EXIT`    | Else                                | `IDLE`              | No cars to exit, return to idle.             |
 | `EXIT_OPEN`     | Always                              | `EXIT_CLOSE`        | Open exit gate for one cycle.                |
