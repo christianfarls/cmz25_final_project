@@ -108,7 +108,7 @@ The parking lot system operates as follows:
 
 ## Design Considerations
 
-- **Max Car Capacity**: The system ensures that the number of cars in the lot does not exceed `MAX_COUNT` (20 cars).
+- **Max Car Capacity**: The system ensures that the number of cars in the lot does not exceed `MAX_COUNT` (value input by user).
 - **Passcode Validation**: The system requires a correct passcode to open the entry gate, providing basic security.
 - **State-based Operation**: The finite state machine ensures that the system operates in a predictable manner, with clear states for handling different requests.
 
