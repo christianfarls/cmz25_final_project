@@ -86,7 +86,6 @@ The FSM is designed with 7 states:
 | `car_count <= car_count - 1` | Decrement car count when a car exits and the exit gate is opened.  |
 | `entry_gate_open <= 0`   | Close the entry gate after one cycle.                                 |
 | `exit_gate_open <= 0`    | Close the exit gate after one cycle.                                  |
-
 ## Functional Description
 
 The parking lot system operates as follows:
@@ -97,7 +96,7 @@ The parking lot system operates as follows:
 2. **Entry Request Handling** (`CHECK_ENTRY`):
    - If an entry request is received, the system checks whether the passcode matches the predefined `PASSCODE` and whether the parking lot is not full (`car_count < MAX_COUNT`).
    - If the passcode is correct and space is available, the system transitions to the `ENTRY_OPEN` state, where the entry gate is opened, and a car is allowed to enter. The car count is incremented.
-   - If the passcode is incorrect or the lot is full, the system transitions back to the `IDLE` state.
+   - If the passcode is incorrect or the lot is full, the system transitions back to the `IDLE` state. Additionally, if the lot is full, the lot_full flag is set to 1 until a car exits.
 
 3. **Exit Request Handling** (`CHECK_EXIT`):
    - If an exit request is received, the system checks whether there are any cars in the parking lot (`car_count > 0`).
